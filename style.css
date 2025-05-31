@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+body {
+    background-color:#457d46;
+    color: white;
+}
+nav {
+    height: 90px;
+    width: 100%;
+    
+    padding: 10px;  
+    display: flex;
+    justify-content: space-between;
+    
+}
+nav ul {
+    height: 100%;
+}
+nav ul:nth-child(2){
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul img {
+    height: 100%;
+}
+nav ul {
+    padding-left: 40px;
+}
+
+    /* Slider Start */ 
+.CartBtn {
+  width: 140px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background-color:#F39F0A(255, 208, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .5s;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+}
+
+.IconContainer {
+  position: absolute;
+  left: -50px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: .5s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(17, 17, 17);
+  z-index: 1;
+  transition-duration: .5s;
+  font-size: 1.04em;
+  font-weight: 600;
+}
+
+.CartBtn:hover .IconContainer {
+  transform: translateX(58px);
+  border-radius: 40px;
+  transition-duration: .5s;
+}
+
+.CartBtn:hover .text {
+  transform: translate(10px,0px);
+  transition-duration: .5s;
+}
+
+.CartBtn:active {
+  transform: scale(0.95);
+  transition-duration: .5s;
+}
+
+nav ul li{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      justify-content: space-between;  
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+    }
+
+/*slider close*/
+.swiper{
+    height: 80vh;
+}
+
+.categories{
+  height: 60vh;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.category{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cat{
+  height: 150px;
+  width: 150px;
+  border: 2px dashed white;
+  border-radius: 20px 0px 20px 0px;
+  background-image: url(./5.png);
+  background-size: 100%;
+}
+
+.Products {
+ padding: 40px;
+ height: auto;
+ width: 100%;
+ text-align: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.product {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.product-cards {
+  margin: 30px;
+  height: 300px;
+  width: 250px;
+  border: 2px dashed wheat;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+img {
+  height: 65%;
+}
+
+/* From Uiverse.io by dldrs */ 
+button {
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  border-radius: 300px;
+  border: none;
+  background-color: hsl(255deg 50% 40%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 2px 7px -3px;
+  font-family: "Inter", sans-serif;
+}
+
+.default-btn {
+  background-image: linear-gradient(
+    90.1deg,
+    rgba(84, 212, 228, 1) 0.2%,
+    rgba(68, 36, 164, 1) 99.9%
+  );
+}
+
+.default-btn,
+.hover-btn {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 1em 3em;
+  border-radius: 0px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.hover-btn {
+  position: absolute;
+  inset: 0;
+  font-size: 16px;
+  padding: 1em 3em;
+  text-align: center;
+  background: rgb(26, 35, 126);
+  background: linear-gradient(
+    63deg,
+    rgba(26, 35, 126, 1) 0%,
+    rgba(69, 39, 160, 1) 100%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transform: translate(0%, 100%);
+}
+
+.default-btn span {
+  color: hsl(0, 0%, 100%);
+}
+
+.hover-btn span {
+  color: hsl(0, 0%, 100%);
+}
+
+button:hover .default-btn {
+  transform: translate(0%, -100%);
+}
+
+button:hover .hover-btn {
+  transform: translate(0%, 0%);
+}
+
+.aboutsection {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.left-section {
+  height: 100%;
+  width: 60%;
+  justify-content: space-between;
+  text-align: justify;
+  display: flex;
+}
+
+.right-section {
+  height: 100%;
+  width: 40%;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.text-section {
+      width: 100%;
+      padding: 40px;
+    }
+
+    .text-section h2 {
+      
+      color: #e65100;
+      font-size: 24px;
+      justify-content: space-between;
+    }
+
+    .text-section p {
+      padding: 10px;
+      font-size: 21px;
+      font-style: bold;
+      line-height: 1.6;
+      justify-content: space-between;
+      color:#0b0b0b;
+    }
+
+.imagesection {
+  height: 150%;
+}    
+
+footer{
+  padding-left: 40px;
+  margin-top: 5vh;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+footer ul img{
+  height: 90px;
+}
+
+footer ul:nth-child(1){
+  height: 100%;
+  width: 20%;
+  padding: 30px;
+} 
+
+footer ul{
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+}
+  
+footer a{
+  color: rgb(176, 216, 229);
+}
+
+footer a:hover{
+text-decoration: underline;
+}
+
+nav ul li:hover{
+  text-decoration: underline;
+}
